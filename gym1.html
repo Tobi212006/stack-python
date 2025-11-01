@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Naav Maharashtra Vyamshala | महाराष्ट्र व्यायामशाळा</title>
+  <meta name="description" content="Premium Marathi gym: glassy cards, bold trainers, member stories & modern schedule." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#181827;
+      --card:#23233b;
+      --accent-grad: linear-gradient(90deg,#f7b733 20%,#fc4a1a 80%);
+      --muted:#e6e6e6;
+      --glass:rgba(255,255,255,0.09);
+      --radius:18px;
+      --shadow:0 8px 36px rgba(30,32,44,0.12);
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      color-scheme: dark;
+    }
+    html,body {
+      height:100%;
+      margin:0;
+      background:var(--bg);
+      color:var(--muted);
+    }
+    body {
+      background: linear-gradient(180deg,#181827 0%, #141416 100%);
+      font-size:17px;
+    }
+    .container {
+      max-width:1120px;
+      margin:auto;
+      padding:28px;
+    }
+    header {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .logo {
+      width:72px;
+      height:72px;
+      border-radius:13px;
+      background:var(--accent-grad);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      font-size:27px;
+      color:#101014;
+      box-shadow:var(--shadow);
+    }
+    h1 {
+      margin:0;
+      font-size:28px;
+      color:white;
+      letter-spacing:.5px;
+      font-family:'Montserrat',sans-serif
+    }
+    .tag {
+      font-size:16px;
+      color:#feb;
+    }
+    nav {
+      display:flex;
+      gap:13px;
+    }
+    nav a {
+      padding:8px 17px;
+      border-radius:9px;
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:700;
+      letter-spacing:.2px;
+      font-family:'Montserrat',sans-serif;
+      transition:color 0.16s,background 0.19s;
+      cursor:pointer;
+    }
+    nav a:hover {
+      background:var(--glass);
+      color:#fff;
+    }
+    main {
+      margin-top:18px;
+    }
+    .hero {
+      background: linear-gradient(90deg,rgba(255,125,86,0.09),rgba(255,255,255,0.0));
+      padding:38px;
+      border-radius:var(--radius);
+      display:grid;
+      grid-template-columns:1fr 360px;
+      gap:28px;
+      align-items:center;
+      box-shadow: 0 10px 36px rgba(0,0,0,0.17);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(120deg,#f7b73333 30%,#fc4a1a33 80%);
+      pointer-events:none;
+      z-index:0;
+    }
+    .hero-left {
+      position:relative;
+      z-index:1;
+    }
+    .hero-left h2 {
+      font-size:35px;
+      margin:0;
+      color:white;
+      font-family:'Montserrat',sans-serif;
+    }
+    .hero-left p {
+      margin-top:14px;
+      line-height:1.65;
+    }
+    .cta-row {
+      margin-top:18px;
+      display:flex;
+      gap:14px;
+    }
+    .btn {
+      background:var(--accent-grad);
+      color:#181827;
+      font-weight:800;
+      padding:11px 18px;
+      border-radius:12px;
+      text-decoration:none;
+      font-family:'Montserrat';
+      font-size:17px;
+      box-shadow:0 2px 11px rgba(254,186,105,0.06);
+      transition:background 0.25s,transform 0.18s;
+      cursor:pointer;
+    }
+    .btn:hover {
+      background:linear-gradient(90deg,#fc4a1a 40%,#f7b733 80%);
+      color:#fff;
+      transform:scale(1.07);
+    }
+    .btn.ghost {
+      background:transparent;
+      border:2px solid #fc4a1a;
+      color:#fc4a1a;
+    }
+    .btn.ghost:hover {
+      background:var(--accent-grad);
+      color:#181827;
+    }
+    .hero-right {
+      background:rgba(255,255,255,0.04);
+      padding:20px;
+      border-radius:14px;
+      box-shadow:0 2px 14px rgba(45,45,71,0.13);
+    }
+    .stats {
+      display:flex;
+      gap:17px;
+    }
+    .stat {
+      flex:1;
+      text-align:center;
+      padding:10px;
+      border-radius:9px;
+      background:var(--glass);
+    }
+    .stat h3 {
+      margin:0 0 3px;
+      color:#f7b733;
+      font-size:26px;
+    }
+    .stat p {
+      margin:0;
+      font-size:15px;
+    }
+    section {
+      margin-top:38px;
+    }
+    h3 {
+      font-size:23px;
+      color:white;
+      margin-bottom:10px;
+    }
+    .card {
+      background:var(--glass);
+      backdrop-filter:blur(9px) saturate(140%);
+      border-radius:14px;
+      box-shadow: var(--shadow);
+      padding:21px;
+      border:1.5px solid rgba(255,255,255,0.07);
+      transition: box-shadow 0.19s,transform 0.15s;
+    }
+    .card:hover {
+      box-shadow:0 11px 43px rgba(255,183,51,0.11),var(--shadow);
+      transform:scale(1.025);
+    }
+    .grid {
+      display:grid;
+      gap:16px;
+    }
+    .services {
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    }
+    .trainers {
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    }
+    .trainer-photo {
+      width:100%;
+      height:140px;
+      border-radius:11px;
+      background:var(--accent-grad);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      font-size:28px;
+      color:#111;
+      margin-bottom:13px;
+    }
+    .plans {
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+    .plan {
+      min-width:210px;
+    }
+    .plan h5 {
+      margin:0;
+      color:#fc4a1a;
+      font-size:1.2em;
+    }
+    .plan p {
+      margin-top:10px;
+      font-size:15px;
+    }
+    .schedule-table {
+      width:100%;
+      border-collapse:collapse;
+      margin-top:12px;
+    }
+    .schedule-table th, .schedule-table td {
+      padding:10px 7px;
+      border-bottom:1px dashed rgba(255,255,255,0.08);
+      text-align:left;
+    }
+    .testimonials {
+      margin:38px 0;
+      display:grid;
+      gap:22px;
+      grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    }
+    .testimonial {
+      background:var(--glass);
+      backdrop-filter:blur(7px) saturate(130%);
+      border-radius:13px;
+      padding:22px;
+      font-style:italic;
+      box-shadow: 0 3px 20px rgba(255,183,51,0.12),var(--shadow);
+    }
+    .testimonial strong {
+      color:#fc4a1a;
+      font-size:16px;
+    }
+    footer {
+      margin-top:38px;
+      padding:24px;
+      border-radius:13px;
+      background:var(--glass);
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+    }
+    .small {
+      font-size:14px;
+      color:#aab;
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.7);
+      justify-content:center;
+      align-items:center;
+      z-index:1000;
+    }
+    .modal.active {
+      display:flex;
+    }
+    .modal-content {
+      background:var(--card);
+      padding:20px;
+      border-radius:12px;
+      max-width:400px;
+      width:90%;
+    }
+    .modal-content h4 {
+      margin-top:0;
+      color:#fc4a1a;
+    }
+    .modal-content label {
+      display:block;
+      margin-top:10px;
+      font-size:14px;
+    }
+    .modal-content input,
+    .modal-content textarea {
+      width:100%;
+      padding:8px;
+      margin-top:5px;
+      border-radius:6px;
+      border:1px solid #444;
+      background:#222;
+      color:white;
+      font-size:14px;
+    }
+    .modal-content button {
+      margin-top:12px;
+    }
+    @media(max-width:800px){
+      .hero {
+        grid-template-columns:1fr;
+      }
+      .container {
+        padding:14px;
+      }
+      header, .plans, footer {
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">NM</div>
+        <div>
+          <h1>Naav Maharashtra Vyamshala</h1>
+          <div class="tag">महाराष्ट्र व्यायामशाळा — Strength. Fitness. Community.</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a onclick="openModal('about')">About / बद्दल</a>
+        <a onclick="openModal('services')">Services / सेवा</a>
+        <a onclick="openModal('trainers')">Trainers / प्रशिक्षक</a>
+        <a onclick="openModal('plans')">Membership / सदस्यत्व</a>
+        <a onclick="openModal('schedule')">Schedule / वेळापत्रक</a>
+        <a onclick="openModal('contact')">Contact / संपर्क</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-left">
+          <h2 id="hero-heading">Welcome to Naav Maharashtra Vyamshala</h2>
+          <p>मराठी समुदायासाठी जिम – Beginner आणि Advanced साठी customized plans, group classes आणि motivating टीम.</p>
+          <div class="cta-row">
+            <a class="btn" onclick="openModal('plans')">Join Now / सामील व्हा</a>
+            <a class="btn ghost" onclick="openModal('contact')">Request Visit / भेट मागवा</a>
+          </div>
+        </div>
+        <aside class="hero-right" aria-label="Key stats">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <strong>Why choose us / का निवडावे?</strong>
+            <span class="small">Local • Marathi</span>
+          </div>
+          <div class="stats" role="list">
+            <div class="stat" role="listitem"><h3>10+</h3><p>Years Experience / अनुभव</p></div>
+            <div class="stat" role="listitem"><h3>15</h3><p>Certified Trainers / प्रमाणित प्रशिक्षक</p></div>
+            <div class="stat" role="listitem"><h3>100+</h3><p>Happy Members / समाधानी सदस्य</p></div>
+          </div>
+          <div style="margin-top:12px;font-size:13px">
+            <strong>Location:</strong> Mumbai
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="grid">
+        <h3>About / बद्दल</h3>
+        <div class="card">
+          <p>Naav Maharashtra Vyamshala ही मुंबईतील आधुनिक मराठी जिम आहे जिथे सुरक्षित प्रशिक्षण, प्रगत योजना आणि प्रेरणादायी टीम मिळते.</p>
+        </div>
+      </section>
+
+      <section id="services" class="grid">
+        <h3>Services / सेवा</h3>
+        <div class="services">
+          <div class="card"><h4>Personal Training</h4><p>One-on-one training, customized plans / वैयक्तिक प्रशिक्षण.</p></div>
+          <div class="card"><h4>Group Classes</h4><p>Yoga, HIIT, strength sessions / समूह वर्ग.</p></div>
+          <div class="card"><h4>Strength & Conditioning</h4><p>Barbell, kettlebells, safe overload / ताकद आणि फिटनेस प्रशिक्षण.</p></div>
+          <div class="card"><h4>Nutrition Guidance</h4><p>Meal plans and tips / आहार मार्गदर्शन.</p></div>
+        </div>
+      </section>
+
+      <section id="trainers" class="grid">
+        <h3>Trainers / प्रशिक्षक</h3>
+        <div class="trainers">
+          <div class="card"><div class="trainer-photo">AB</div><h4>Avinash B.</h4><p class="small">Strength coach • 6 yrs • NSCA</p></div>
+          <div class="card"><div class="trainer-photo">SM</div><h4>Sangeeta M.</h4><p class="small">Yoga trainer • 8 yrs • Marathi</p></div>
+          <div class="card"><div class="trainer-photo">RK</div><h4>Ramesh K.</h4><p class="small">Cardio • 4 yrs</p></div>
+        </div>
+      </section>
+
+      <section id="plans" class="grid">
+        <h3>Membership / सदस्यत्व</h3>
+        <div class="plans">
+          <div class="plan card"><h5>Basic — ₹500 / महिना</h5><p>Off-peak access, locker, orientation.</p><a class="btn" onclick="openModal('plans')">Sign Up / नोंदणी करा</a></div>
+          <div class="plan card"><h5>Standard — ₹900 / महिना</h5><p>Classes, trainer check-in.</p><a class="btn" onclick="openModal('plans')">Sign Up / नोंदणी करा</a></div>
+          <div class="plan card"><h5>Premium — ₹1800 / महिना</h5><p>Unlimited classes, nutrition consult.</p><a class="btn" onclick="openModal('plans')">Sign Up / नोंदणी करा</a></div>
+        </div>
+      </section>
+
+      <section id="schedule" class="grid">
+        <h3>Schedule / वेळापत्रक</h3>
+        <div class="card">
+          <table class="schedule-table">
+            <thead>
+              <tr><th>Day</th><th>Morning</th><th>Evening</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Mon</td><td>Open Gym 6–9AM</td><td>HIIT 6–7PM</td></tr>
+              <tr><td>Tue</td><td>Yoga 6–7AM</td><td>Strength 6–8PM</td></tr>
+              <tr><td>Wed</td><td>Open Gym</td><td>Functional</td></tr>
+              <tr><td>Thu</td><td>Yoga</td><td>Cardio</td></tr>
+              <tr><td>Fri</td><td>Open Gym</td><td>Mixed Class</td></tr>
+              <tr><td>Sat</td><td>Classes</td><td>Workshops</td></tr>
+              <tr><td>Sun</td><td colspan="2">Closed / Events</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="contact" class="grid">
+        <h3>Contact / संपर्क</h3>
+        <div class="card" style="display:flex;flex-direction:row;gap:18px;">
+          <div style="flex:1;">
+            <form class="contact-form" aria-label="Contact form">
+              <label class="small">Full name / पूर्ण नाव</label>
+              <input type="text" required />
+              <label class="small">Phone / WhatsApp</label>
+              <input type="tel" required pattern="[0-9]{10}" />
+              <label class="small">Message / भेट वेळ</label>
+              <textarea rows="3" required></textarea>
+              <button class="btn" type="submit">Send Request / विनंती पाठवा</button>
+            </form>
+          </div>
+          <div
