@@ -39,15 +39,42 @@ Related practice includes explaining stack/queue operations, edge cases and time
 ├── stack.py
 ├── queue.py
 ├── circular_queue.py
+├── algorithms/
+│   ├── searching.py
+│   └── test_searching.py
 ├── docs/
 │   ├── LEARNING_ROADMAP.md
 │   ├── LEARNING_LOG.md
-│   └── PROBLEM_SOLVING_TEMPLATE.md
+│   ├── PROBLEM_SOLVING_TEMPLATE.md
+│   └── PROGRESS.md
 ├── exercises/
+│   ├── basics.py
+│   ├── test_basics.py
 │   └── README.md
 └── pygame-labs/
+    ├── vector_lab.py
     └── README.md
 ```
+
+## Run the new practice examples and tests
+
+Run from the repository root:
+
+```bash
+python exercises/basics.py
+python algorithms/searching.py
+python -m unittest discover -s exercises -p "test_*.py"
+python -m unittest discover -s algorithms -p "test_*.py"
+```
+
+The Pygame vector lab is a reconstructed learning example. Install its optional dependency before running it:
+
+```bash
+python -m pip install pygame
+python pygame-labs/vector_lab.py
+```
+
+See [the progress snapshot](docs/PROGRESS.md) for details and run instructions.
 
 ## How to run the data-structure examples
 
@@ -83,8 +110,10 @@ If a file uses interactive input, follow its prompts. These commands are suggest
 
 - [ ] Review and clean up the current stack, queue and circular queue scripts.
 - [ ] Add consistent examples and tests for each operation.
-- [ ] Add searching and sorting exercises with complexity notes.
-- [ ] Add a small Pygame lab with setup instructions and screenshots.
+- [x] Add initial searching exercises with complexity notes and unit tests.
+- [x] Add a small Pygame vector lab with setup instructions.
+- [ ] Add sorting exercises and compare their performance.
+- [ ] Review and test every existing data-structure operation.
 - [ ] Maintain a dated learning log based on work actually completed.
 - [ ] Link finished projects from the profile README.
 
