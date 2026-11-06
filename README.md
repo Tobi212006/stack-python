@@ -28,6 +28,7 @@ Only mark a topic **Completed** when the code runs and the explanation/tests are
 - [Stack implementation](stack.py)
 - [Queue implementation](queue.py)
 - [Circular queue implementation](circular_queue.py)
+- [Reusable stack, queue and circular queue classes](data_structures.py)
 
 Related practice includes explaining stack/queue operations, edge cases and time complexity, and Pygame experiments with Vector2 arithmetic, axes, shape drawing, scaling, rotation, positioning and frame timing.
 
@@ -65,6 +66,7 @@ python exercises/basics.py
 python algorithms/searching.py
 python -m unittest discover -s exercises -p "test_*.py"
 python -m unittest discover -s algorithms -p "test_*.py"
+python -m unittest discover -s tests -p "test_*.py"
 ```
 
 The Pygame vector lab is a reconstructed learning example. Install its optional dependency before running it:
@@ -109,7 +111,7 @@ If a file uses interactive input, follow its prompts. These commands are suggest
 ## Next milestones
 
 - [ ] Review and clean up the current stack, queue and circular queue scripts.
-- [ ] Add consistent examples and tests for each operation.
+- [x] Add reusable stack, queue and circular queue classes with unit tests.
 - [x] Add initial searching exercises with complexity notes and unit tests.
 - [x] Add a small Pygame vector lab with setup instructions.
 - [ ] Add sorting exercises and compare their performance.
